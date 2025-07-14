@@ -38,6 +38,8 @@
 
 **Phase 0 Deliverable:** A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens based on a user's on-chain payment or subscription status.
 
+[https://github.com/prometheus-protocol/chimera](https://github.com/prometheus-protocol/chimera)
+
 ---
 
 ### Phase 1: Developer Enablement - "Project Kitsune" (The SDKs)
