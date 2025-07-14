@@ -8,7 +8,7 @@
 
 ---
 
-### [Phase 0: The Core - "Project Chimera" (The Payment Engine)](https://github.com/prometheus-protocol/chimera)
+### Phase 0: The Core - "Project Chimera" (The Payment Engine)
 
 **Goal:** Build the foundational on-chain payment engine. It must be a production-grade, secure, and standards-compliant OAuth2 server capable of brokering payments and issuing authorization tokens.
 
@@ -38,7 +38,7 @@
 
 **Phase 0 Deliverable:** A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens based on a user's on-chain payment or subscription status.
 
-[https://github.com/prometheus-protocol/chimera](https://github.com/prometheus-protocol/chimera)
+[Chimera: On-Chain OAuth2 Payment Server](https://github.com/prometheus-protocol/chimera)
 
 ---
 
