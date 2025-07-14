@@ -1,5 +1,7 @@
 ### The Campaign: "Project Prometheus" - Bringing Fire to the Agents
-<img width="1536" height="900" alt="banner" src="https://github.com/user-attachments/assets/f9189ebb-7dbd-4087-b8be-205c8e7ddc69" />
+
+<img width="1536" height="1024" alt="banner-professional" src="https://github.com/user-attachments/assets/37f1741a-b584-41ee-b308-af6e9a411c2f" />
+
 
 **Objective:** To create a decentralized, open-source, and economically viable ecosystem for AI agents on the Internet Computer.
 
