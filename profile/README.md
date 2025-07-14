@@ -25,7 +25,7 @@
     *   [x] Implement the `register_subscription` payment flow.
 
 *   **Security & MCP Compliance.**
-    *   [ ] **Implement PKCE (Proof Key for Code Exchange):** Secure the authorization flow by requiring `code_challenge` and `code_verifier` parameters, as per RFC 7636. This is non-negotiable for public clients.
+    *   [x] **Implement PKCE (Proof Key for Code Exchange):** Secure the authorization flow by requiring `code_challenge` and `code_verifier` parameters, as per RFC 7636. This is non-negotiable for public clients.
     *   [ ] **Implement Dynamic Client Registration (DCR):** Create a public `/register` endpoint that allows clients to register programmatically. This endpoint must be protected by an anti-spam/collateral fee, using our existing economic layer.
     *   [ ] **Implement OAuth Server Metadata:** Expose a `/.well-known/oauth-authorization-server` discovery document detailing all endpoints, supported grant types, PKCE methods, and other server capabilities.
 
