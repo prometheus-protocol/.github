@@ -2,7 +2,7 @@
 
 ### A community-owned payment rail for the modern web, designed to replace the 2.9% tax on the internet.
 
-<img width="1536" height="900" alt="banner" src="https://github.com/user-attachments/assets/f9189ebb-7dbd-4087-b8be-205c8e7ddc69" />
+<img width="1536" height="1024" alt="banner-professional" src="https://github.com/user-attachments/assets/0c7c5720-1d4a-4e50-b410-873a9ba9cc07" />
 
 **Objective:** To build a decentralized, open-source payment protocol that makes Web3 economics simple and accessible for all developers. We provide the tools to enable everything from global e-commerce checkouts to per-second micropayments, all with near-zero fees and unparalleled security.
 
