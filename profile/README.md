@@ -84,6 +84,5 @@
 *   [ ] **Governance:** Design and deploy a governance canister (DAO) to control the Auth Canister.
 *   [ ] **Decentralize:** Execute the one-way transaction to make the DAO the sole controller of the Auth Canister.
 *   [ ] **Advanced Payments:** Implement the "Toll Booth" per-use metering model.
-*   [ ] **Advanced Registration:** Implement Dynamic Client Registration with the anti-spam fee.
 *   [ ] **Scale:** Design and implement the sharding and routing architecture as needed.
 *   [ ] **Community:** Foster the community through grants, support, and continuous improvement based on feedback.
