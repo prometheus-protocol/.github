@@ -5,31 +5,35 @@
 
 ---
 
-### Phase 0: The Core - "Project Chimera" (The Auth Canister MVP)
+### Phase 0: The Core - "Project Chimera" (MCP-Compliant Auth Server)
 
-**Goal:** Build the foundational, monolithic Auth Canister. It must be secure, functional, and auditable.
+**Goal:** Build a foundational, secure, and MCP-compliant Auth Canister. It must be self-service for developers and ready for integration with public clients.
 
 *   **Scaffolding & Identity.**
     *   [x] Set up the Motoko project repository on GitHub with a permissive license (MIT).
-    *   [x] Implement the core data structures in stable memory: `StableTrieMap` for clients, subscriptions, etc.
-    *   [x] Implement the Internet Identity integration for the `/authorize` endpoint. The output is a simple redirect flow that produces an `authorization_code`.
+    *   [x] Implement the core data structures in stable memory.
+    *   [x] Implement the Internet Identity integration for the `/authorize` endpoint.
 
 *   **The OAuth2 Engine.**
-    *   [x] Implement the `/token` endpoint. It must handle the `authorization_code` grant type.
-    *   [x] Integrate a JWT signing library for Motoko. The `/token` endpoint must return a standard, signed JWT.
-    *   [x] Implement the `/.well-known/jwks.json` endpoint to expose the canister's public key for external validation.
+    *   [x] Implement the `/token` endpoint for the `authorization_code` grant type.
+    *   [x] Integrate a JWT signing library and return standard, signed JWTs.
+    *   [x] Implement the `/.well-known/jwks.json` endpoint for public key discovery.
 
 *   **The Economic Layer (Subscription Model).**
-    *   [ ] Integrate with an ICRC-2 compliant token (we'll use a test ledger first).
-    *   [ ] Implement the subscription logic: A user's `Principal` is checked for an active subscription before a token is issued.
-    *   [ ] Implement the payment flow: A `register_subscription(duration)` function that triggers an `icrc2_transfer_from` call to pull funds from a user's pre-approved allowance.
+    *   [x] Integrate with an ICRC-2 compliant token ledger.
+    *   [x] Implement the subscription logic to gate token issuance.
+    *   [x] Implement the `register_subscription` payment flow.
 
-*   **Security & Static Registration.**
-    *   [ ] Implement a simple, controller-only `register_client()` function. For the MVP, we will manually register the first few resource servers. Dynamic registration is too complex for Phase 0.
-    *   [ ] Write comprehensive unit and integration tests for all flows.
+*   **Security & MCP Compliance.**
+    *   [ ] **Implement PKCE (Proof Key for Code Exchange):** Secure the authorization flow by requiring `code_challenge` and `code_verifier` parameters, as per RFC 7636. This is non-negotiable for public clients.
+    *   [ ] **Implement Dynamic Client Registration (DCR):** Create a public `/register` endpoint that allows clients to register programmatically. This endpoint must be protected by an anti-spam/collateral fee, using our existing economic layer.
+    *   [ ] **Implement OAuth Server Metadata:** Expose a `/.well-known/oauth-authorization-server` discovery document detailing all endpoints, supported grant types, PKCE methods, and other server capabilities.
+
+*   **Finalization.**
+    *   [ ] Write comprehensive unit and integration tests for all flows, including PKCE and DCR.
     *   [ ] **Action Item:** Submit the canister code for a preliminary security audit.
 
-*   **Phase 0 Deliverable:** A functional, auditable on-chain OAuth2 server that can issue JWTs based on a user's on-chain subscription status.
+*   **Phase 0 Deliverable:** A functional, auditable, and MCP-compliant on-chain OAuth2 server that supports PKCE, Dynamic Client Registration, and issues JWTs based on a user's on-chain subscription status.
 
 ---
 
