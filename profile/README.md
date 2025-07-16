@@ -14,7 +14,7 @@ To build a decentralized, open-source payment protocol that makes Web3 economics
 
 ### [Phase 0: The Core - "Project Chimera" (The Payment Engine)](https://github.com/prometheus-protocol/auth-canister)
 
-**Goal:** Build the foundational on-chain payment engine. It must be a production-grade, secure, and standards-compliant OAuth2 server capable of brokering payments and issuing authorization tokens.
+**Goal:** Build the foundational on-chain payment engine. It must be a production-grade, secure, and standards-compliant OAuth2 server capable of brokering payments and issuing authorization tokens. It must also support the Model Context Protocol (MCP) OAuth requirements including PKCE, DCR, and Resource Indicators.
 
 *   **Scaffolding & Identity.**
     *   [x] Set up the Motoko project repository on GitHub with a permissive license (MIT).
