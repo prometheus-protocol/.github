@@ -12,7 +12,7 @@ To build a decentralized, open-source payment protocol that makes Web3 economics
 
 ---
 
-### Phase 0: The Core - "Project Chimera" (The Payment Engine)
+[### Phase 0: The Core - "Project Chimera" (The Payment Engine)](https://github.com/prometheus-protocol/auth-canister)
 
 **Goal:** Build the foundational on-chain payment engine. It must be a production-grade, secure, and standards-compliant OAuth2 server capable of brokering payments and issuing authorization tokens.
 
@@ -40,9 +40,7 @@ To build a decentralized, open-source payment protocol that makes Web3 economics
     *   [ ] Write comprehensive unit and integration tests for all flows, including PKCE and DCR.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
 
-**Phase 0 Deliverable:** A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens based on a user's on-chain payment or subscription status.
-
-[Chimera: On-Chain OAuth2 Payment Server](https://github.com/prometheus-protocol/chimera)
+[**Phase 0 Deliverable:** A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens based on a user's on-chain payment or subscription status.](https://github.com/prometheus-protocol/auth-canister)
 
 ---
 
