@@ -6,7 +6,7 @@
 
 ---
 
-**Objective:** 
+**Objective:**
 
 To build a decentralized, open-source payment protocol that makes Web3 economics simple and accessible for all developers. We provide the tools to enable everything from global e-commerce checkouts to per-second micropayments, all with near-zero fees and unparalleled security.
 
@@ -26,21 +26,21 @@ To build a decentralized, open-source payment protocol that makes Web3 economics
     *   [x] Integrate a JWT signing library and return standard, signed JWTs.
     *   [x] Implement the `/.well-known/jwks.json` endpoint for public key discovery.
 
-*   **The Economic Layer (Subscription Model).**
+*   **The Economic Layer (Microtransaction Model).**
     *   [x] Integrate with an ICRC-2 compliant token ledger.
-    *   [x] Implement the subscription logic to gate token issuance.
-    *   [x] Implement the `register_subscription` payment flow.
+    *   [x] Implement the `charge_user` function, allowing trusted resource servers to execute pay-per-use microtransactions.
+    *   [x] Implement the user-facing allowance model for transaction security.
 
 *   **Security & Public Readiness.**
     *   [x] **Implement PKCE (Proof Key for Code Exchange):** Secure the authorization flow for public clients (web & mobile apps) as per RFC 7636.
-    *   [x] **Implement Dynamic Client Registration (DCR):** Create a public `/register` endpoint that allows clients to register programmatically, protected by an anti-spam fee.
+    *   [x] **Implement Dynamic Client Registration (DCR):** Create a public `/register` endpoint that allows clients to register programmatically.
     *   [x] **Implement OAuth Server Metadata:** Expose a `/.well-known/oauth-authorization-server` discovery document for automated client configuration.
 
 *   **Finalization.**
     *   [ ] Write comprehensive unit and integration tests for all flows, including PKCE and DCR.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
 
-**Phase 0 Deliverable:** [A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens based on a user's on-chain payment or subscription status.](https://github.com/prometheus-protocol/auth-canister)
+**Phase 0 Deliverable:** [A production-ready, on-chain OAuth2 payment server that supports PKCE, DCR, and can issue authorization tokens and broker microtransactions based on a user's on-chain allowance.](https://github.com/prometheus-protocol/auth-canister)
 
 ---
 
@@ -51,14 +51,14 @@ To build a decentralized, open-source payment protocol that makes Web3 economics
 #### SDK 1 (Launch Priority): `prometheus-js` (for Web2 Services & Clients)
 This is the low-level, universal library for integrating existing Web2 stacks with the Prometheus Protocol.
 
-*   [ ] Provide helpers for frontend applications (React, Svelte, etc.) to easily initiate the OAuth2 login flow.
-*   [ ] Implement the "Service Principal" logic, providing a simple function for a Node.js/Express server to trigger micropayments.
+*   [x] **Provide helpers for frontend applications:** The `createPrometheusClient` function encapsulates the entire OAuth2 flow, including DCR, token management, and redirects.
+*   [x] **Implement the "Service Principal" logic:** The `PrometheusServerClient` provides a simple `charge()` method for a Node.js/Express server to trigger micropayments.
 
 #### SDK 2 (Launch Priority): `prometheus.mo` (for On-Chain Services)
 A small, focused library for any on-chain service needing to integrate Prometheus payments.
 
 *   [ ] Provide a simple `validate_jwt(token)` function that handles JWKS fetching, caching, and full token validation.
-*   [ ] Provide a helper function for on-chain resource servers to check a user's subscription status.
+*   [ ] Provide a helper function for on-chain resource servers to check a user's subscription status (managed by the resource server itself).
 
 #### SDK 3 (Post-Launch): `mcp.mo` (The MCP Server Framework)
 A high-level, "batteries-included" framework for the specific use case of building MCP servers on the IC.
@@ -74,11 +74,11 @@ A high-level, "batteries-included" framework for the specific use case of buildi
 **Goal:** Build live, working demos to prove the entire stack's versatility and its immediate value to developers.
 
 *   **The Demos.**
-    *   [ ] **Demo 1 (The Web2 Revolution): Micropayments for Existing APIs.** We will take an existing MCP server running on Google Cloud and use our new `prometheus-js` SDK to add micropayments for each API call. This demonstrates the power of Prometheus as a "drop-in" Web3 upgrade for any Web2 service.
-    *   [ ] **Demo 2 (The Web3 Foundation): On-Chain Subscriptions.** We will build a simple "premium content" canister that uses the `prometheus.mo` SDK to grant access based on a user's on-chain subscription status. This demonstrates the ease of building new, sovereign, monetizable services on the IC.
+    *   [x] **Demo 1 (The Web2 Revolution): Micropayments for Existing APIs.** We have built a proof-of-concept Express server that uses the `prometheus-js` SDK to add micropayments for each API call. This demonstrates the power of Prometheus as a "drop-in" Web3 upgrade for any Web2 service.
+    *   [ ] **Demo 2 (The Web3 Foundation): On-Chain Subscriptions.** We will build a simple "premium content" canister that uses the `prometheus.mo` SDK to grant access based on a user's on-chain subscription status, demonstrating how resource servers manage their own business logic.
 
 *   **The Client & Launch.**
-    *   [ ] Build the frontend clients for both demos.
+    *   [~] Build the frontend clients for both demos. (The client for Demo 1 is functional).
     *   [ ] Write a "Quickstart" tutorial and create a simple landing page for the protocol.
     *   [ ] **Launch Day:** Announce the project on Twitter, the DFINITY dev forums, and relevant Discord channels. Point everyone to the live demos and the GitHub repos.
 
@@ -95,13 +95,13 @@ A high-level, "batteries-included" framework for the specific use case of buildi
     *   [ ] **The Handover:** Execute the one-way transaction to make the DAO the sole controller of the Prometheus Protocol, cementing its status as a decentralized public utility.
 
 *   **The Universal Payment Suite (The Stripe Killers):**
-    *   [ ] **Universal Checkout:** Launch a dedicated, secure checkout UI (`checkout.prometheus.icp.io`) that provides a seamless, one-click payment experience for e-commerce, rivaling Stripe Checkout and Apple Pay.
-    *   [ ] **Streaming Subscriptions & Real-Time Metering:** Go beyond monthly billing. Enable services to charge users by the second, per API call, or per megabyte streamed, with funds flowing directly and continuously.
-    *   [ ] **On-Chain Invoicing & Escrow:** Allow businesses and freelancers to issue invoices as on-chain objects (or NFTs). Funds can be held in a secure, programmatic escrow and released automatically when on-chain conditions are met.
-    *   [ ] **Atomic Revenue Sharing:** Build a "Prometheus Connect" equivalent. Allow platforms and marketplaces to instantly and automatically split incoming revenue among multiple parties (creators, affiliates, treasuries) in a single, atomic transaction.
-    *   [ ] **Cross-Chain Commerce:** Natively support payments via `ckBTC`, `ckETH`, and other chain-key stablecoins, turning Prometheus into a universal payment rail for the entire Web3 ecosystem.
+    *   [ ] **Universal Checkout:** Launch a dedicated, secure checkout UI (`checkout.prometheus.icp.io`) that provides a seamless, one-click payment experience for e-commerce.
+    *   [ ] **Streaming Subscriptions & Real-Time Metering:** Enable services to charge users by the second or per API call, using the `charge` primitive as the foundation for their own business logic.
+    *   [ ] **On-Chain Invoicing & Escrow:** Allow businesses and freelancers to issue invoices as on-chain objects (or NFTs), with funds held in a secure, programmatic escrow.
+    *   [ ] **Atomic Revenue Sharing:** Build a "Prometheus Connect" equivalent, allowing platforms to instantly and automatically split incoming revenue among multiple parties.
+    *   [ ] **Cross-Chain Commerce:** Natively support payments via `ckBTC`, `ckETH`, and stablecoins. This will be achieved by refactoring to a **Payment Gateway Model**, where specialized canisters handle specific tokens, allowing the protocol to become a universal payment rail for the entire Web3 ecosystem.
 
 *   **Ecosystem & Growth:**
+    *   [ ] **Fiat On-Ramps:** Integrate third-party on-ramps directly into the user-facing "allowance management" UI, allowing users to purchase tokens like USDC seamlessly.
     *   [ ] **Merchant Dashboard & Analytics:** Launch a comprehensive dashboard for merchants to track revenue, manage integrations, and view real-time analytics.
-    *   [ ] **Architect for Hyper-Scale:** Design and implement the sharding and routing architecture to ensure the protocol can handle millions of transactions per second.
     *   [ ] **Community Grants & Incubation:** Use the DAO treasury to fund and support the most promising projects building on top of the Prometheus Protocol.
