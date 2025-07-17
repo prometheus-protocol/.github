@@ -8,7 +8,7 @@
 
 **The Vision:**
 
-Every economic interaction on the web—from e-commerce checkouts to API calls—is a transaction. Today, these transactions are gated by private companies that extract fees and control access. Prometheus changes this. We are building a public utility for money on the internet: a simple, powerful protocol that allows any developer to integrate secure, global, near-instant payments for any amount, no matter how small.
+Every economic interaction on the web—from e-commerce checkouts, to API calls, **to autonomous AI agents transacting with each other**—is a transaction. Today, these are gated by private companies that extract fees and control access. Prometheus changes this. We are building a public utility for money on the internet: a simple, powerful protocol that allows any developer to integrate secure, global, near-instant payments for any amount, no matter how small.
 
 ---
 
@@ -23,18 +23,16 @@ Every economic interaction on the web—from e-commerce checkouts to API calls�
 
 *   **The Microtransaction Engine.**
     *   [x] Integrate with an ICRC-2 compliant token ledger.
-    *   [x] Implement the `charge_user` function, allowing trusted resource servers to execute pay-per-use microtransactions.
-    *   [x] Implement a user-facing allowance model for security and control.
+    *   [x] Implement the core `charge_user` primitive, allowing trusted resource servers (**both human-facing apps and AI tools**) to execute pay-per-use microtransactions.
+    *   [x] Implement a user-facing global allowance model for security and control.
 
 *   **Finalization.**
     *   [ ] Write comprehensive unit and integration tests for all flows.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
 
-**Phase 0 Deliverable:** 
+**Phase 0 Deliverable:** A production-ready, on-chain OAuth2 server that can broker microtransactions and issue authorization tokens based on a user's on-chain allowance.
 
-A production-ready, on-chain OAuth2 server that can broker microtransactions and issue authorization tokens based on a user's on-chain allowance.
-
-- https://github.com/prometheus-protocol/auth-canister
+- **Repo:** https://github.com/prometheus-protocol/auth-canister
 
 ---
 
@@ -42,39 +40,37 @@ A production-ready, on-chain OAuth2 server that can broker microtransactions and
 
 **Goal:** Create a modular set of SDKs that make it dead simple for developers to integrate the Prometheus microtransaction rail.
 
-#### SDK 1 (Launch Priority): `prometheus-js` (for Web2 Services & Clients)
+#### SDK 1 (Launched): `prometheus-js` (for Web2 Services & Clients)
 The universal library for integrating existing Web2 stacks with the Prometheus Protocol.
 
 *   [x] **Frontend Client:** A single `createPrometheusClient` function that encapsulates the entire user authentication and authorization flow.
 *   [x] **Backend Client:** A simple `PrometheusServerClient` with a `charge()` method, allowing any server to trigger microtransactions.
 
-#### SDK 2 (Launch Priority): `prometheus.mo` (for On-Chain Services)
+#### SDK 2 (In Progress): `prometheus.mo` (for On-Chain Services)
 A focused library for any on-chain service needing to integrate Prometheus payments.
 
 *   [ ] Provide a simple `validate_jwt(token)` function that handles JWKS fetching, caching, and full token validation.
 *   [ ] Provide a helper function for on-chain services to initiate a `charge` call against the Prometheus payment engine.
 
-**Phase 1 Deliverable:** 
+**Phase 1 Deliverable:** Two core SDKs (`prometheus-js`, `prometheus.mo`) enabling any Web2 or Web3 developer to integrate microtransactions in minutes.
 
-Two core SDKs (`prometheus-js`, `prometheus.mo`) enabling any Web2 or Web3 developer to integrate microtransactions in minutes.
-
-- https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk
+- **NPM Package:** https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk
 
 ---
 
 ### Phase 2: The Proof - "Project Tengu" (The Launch Demos)
 
-**Goal:** Build live, working demos to prove the power and simplicity of the microtransaction rail.
+**Goal:** Build live, working demos to prove the power and simplicity of the microtransaction rail for both human and machine economies.
 
 *   **The Demos.**
-    *   [x] **Demo 1 (The Web2 Revolution): The Drop-in Payment Upgrade.** We have built a proof-of-concept Express API that uses the `prometheus-js` SDK to add per-call microtransactions. This demonstrates how any existing Web2 service can be upgraded to accept Web3 payments without a rewrite.
+    *   [x] **Demo 1 (The Agent Economy): Monetizing AI Tools.** We have taken a standard Model Context Protocol (MCP) server running on Google Cloud and used the `prometheus-js` SDK to add per-call microtransactions. This demonstrates our flagship use case: creating a true pay-per-use model where AI agents can autonomously pay for the tools and resources they need.
     *   [ ] **Demo 2 (The Sovereign SaaS): Building New Business Models.** We will build a simple "premium content" canister that manages its own subscription logic internally. It will use the `charge()` primitive from `prometheus.mo` to bill users. This demonstrates how developers retain full control over their business model while using Prometheus as a simple, powerful payment utility.
 
 *   **The Launch.**
     *   [ ] Write a "Quickstart" tutorial and create a simple landing page for the protocol.
     *   [ ] **Launch Day:** Announce the project on Twitter, the DFINITY dev forums, and relevant Discord channels. Point everyone to the live demos and the GitHub repos.
 
-**Phase 2 Deliverable:** Two live demos showcasing the immediate value of microtransactions for both existing and new applications, plus the documentation to onboard developers.
+**Phase 2 Deliverable:** Two live demos showcasing the immediate value of microtransactions for both the emerging AI agent economy and traditional SaaS applications.
 
 ---
 
@@ -87,11 +83,11 @@ Two core SDKs (`prometheus-js`, `prometheus.mo`) enabling any Web2 or Web3 devel
     *   [ ] **The Handover:** Make the DAO the sole controller of the Prometheus Protocol, cementing its status as a decentralized public utility.
 
 *   **The Programmable Money Suite:**
-    *   [ ] **On-Chain Service Catalogs:** Allow trusted resource servers to publish and manage a dynamic, on-chain catalog of their services and prices. When a user authorizes an application, they will see a clear, human-readable list of potential charges (e.g., 'Purchase Digital Art: 5 ICP', 'Generate Hi-Fi Audio: 0.1 ICP'). This transforms the protocol into a full-fledged e-commerce engine with unparalleled user transparency.
-    *   [ ] **Streaming Payments:** Enable services to charge users by the second, per API call, or per megabyte streamed, using the `charge` primitive as the foundation for real-time billing.
-    *   [ ] **Atomic Revenue Sharing:** Allow platforms and marketplaces to instantly and automatically split incoming revenue among multiple parties (creators, affiliates, treasuries) in a single, atomic transaction.
+    *   [ ] **On-Chain Service Catalogs:** Allow resource servers to publish a dynamic, on-chain catalog of their services and prices. This allows an **AI agent to autonomously discover, understand, and pay for the tools it needs to complete a task**, creating a true open marketplace for machine-to-machine commerce.
+    *   [ ] **Streaming Payments:** Enable services to charge users by the second, per API call, or per megabyte streamed. This is ideal for **persistent AI agents, real-time data streams,** and next-generation subscription models.
+    *   [ ] **Atomic Revenue Sharing:** Allow platforms and marketplaces to instantly and automatically split incoming revenue among multiple parties. This enables complex **AI agent supply chains**, where value flows automatically from the end-user to every agent that contributed to the final result.
 
 *   **Ecosystem & Growth:**
     *   [ ] **Fiat On-Ramps:** Integrate third-party on-ramps directly into the user-facing "allowance management" UI, allowing users to seamlessly purchase tokens like USDC.
-    *   [ ] **Merchant Dashboard & Analytics:** Launch a comprehensive dashboard for merchants to track revenue, manage their service catalogs, and view real-time analytics.
+    *   [ ] **Merchant Dashboard & Analytics:** Launch a comprehensive dashboard for merchants and tool providers to track revenue, manage their service catalogs, and view real-time analytics.
     *   [ ] **Community Grants & Incubation:** Use the DAO treasury to fund and support the most promising projects building on top of the Prometheus Protocol.
