@@ -12,7 +12,7 @@ Every economic interaction on the webâ€”from e-commerce checkouts to API callsâ€
 
 ---
 
-### [Phase 0: The Core - "Project Chimera" (The Payment Engine)](https://github.com/prometheus-protocol/auth-canister)
+### Phase 0: The Core - "Project Chimera" (The Payment Engine)
 
 **Goal:** Build the foundational on-chain engine. It must be a production-grade, standards-compliant OAuth2 server capable of brokering microtransactions and issuing authorization tokens.
 
