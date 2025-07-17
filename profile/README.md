@@ -30,7 +30,11 @@ Every economic interaction on the webâ€”from e-commerce checkouts to API callsâ€
     *   [ ] Write comprehensive unit and integration tests for all flows.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
 
-**Phase 0 Deliverable:** [A production-ready, on-chain OAuth2 server that can broker microtransactions and issue authorization tokens based on a user's on-chain allowance.](https://github.com/prometheus-protocol/auth-canister)
+**Phase 0 Deliverable:** 
+
+A production-ready, on-chain OAuth2 server that can broker microtransactions and issue authorization tokens based on a user's on-chain allowance.
+
+- https://github.com/prometheus-protocol/auth-canister
 
 ---
 
@@ -50,7 +54,11 @@ A focused library for any on-chain service needing to integrate Prometheus payme
 *   [ ] Provide a simple `validate_jwt(token)` function that handles JWKS fetching, caching, and full token validation.
 *   [ ] Provide a helper function for on-chain services to initiate a `charge` call against the Prometheus payment engine.
 
-**Phase 1 Deliverable:** Two core SDKs (`prometheus-js`, `prometheus.mo`) enabling any Web2 or Web3 developer to integrate microtransactions in minutes.
+**Phase 1 Deliverable:** 
+
+Two core SDKs (`prometheus-js`, `prometheus.mo`) enabling any Web2 or Web3 developer to integrate microtransactions in minutes.
+
+- https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk
 
 ---
 
