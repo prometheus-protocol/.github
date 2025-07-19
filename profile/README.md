@@ -41,8 +41,8 @@ Our development is organized into distinct, thematic phases.
     *   [x] Implemented modern security standards: PKCE, DCR, Refresh Token Rotation, and Resource Indicators.
 *   **The Microtransaction Engine:**
     *   [x] Integrated with ICRC-2 compliant token ledgers.
-    *   [x] ~~Implemented the core `charge_user` primitive for pay-per-use transactions.~~ **Implemented an on-chain ICRC-2 allowance system, allowing users to grant specific spending permissions to applications.**
-    *   [x] ~~Implemented a user-facing global allowance model for security and control.~~ **Implemented a user-facing, per-service allowance model for granular security and control.**
+    *   [x] Implemented an on-chain ICRC-2 allowance system, allowing users to grant specific spending permissions to applications.
+    *   [x] Implemented a user-facing, per-service allowance model for granular security and control.
 *   **Finalization:**
     *   [x] Wrote comprehensive unit, integration, and end-to-end tests for all flows.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
@@ -58,10 +58,10 @@ Our development is organized into distinct, thematic phases.
 
 *   **SDK for Web2 & Off-Chain Services (`@prometheus-protocol/typescript-sdk`):**
     *   [x] **Frontend Client:** A single `createPrometheusClient` function that encapsulates the entire user authentication and authorization flow.
-    *   [x] **Backend Client:** A simple `PrometheusServerClient` with a `charge()` method that **directly executes an `icrc2_transfer_from` call on the appropriate ledger, using the allowance granted by the user.**
+    *   [x] **Backend Client:** A simple `PrometheusServerClient` with a `charge()` method that directly executes an `icrc2_transfer_from` call on the appropriate ledger, using the allowance granted by the user.
 *   **SDK for On-Chain Services (`prometheus.mo`):**
     *   [ ] Provide a simple `validate_jwt(token)` function that handles JWKS fetching, caching, and full token validation.
-    *   [ ] ~~Provide a helper function for on-chain services to initiate a `charge` call against the Prometheus payment engine.~~ **Provide a helper function for on-chain services to directly execute an `icrc2_transfer_from` call, leveraging the user's on-chain allowance.**
+    *   [ ] Provide a helper function for on-chain services to directly execute an `icrc2_transfer_from` call, leveraging the user's on-chain allowance.
 
 **Phase 1 Deliverable:** Core SDKs enabling any Web2 or Web3 developer to integrate in minutes.
 - **NPM Package:** [`@prometheus-protocol/typescript-sdk`](https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk)
@@ -75,7 +75,7 @@ Our development is organized into distinct, thematic phases.
 *   **Demo 1 (The Agent Economy): Monetizing AI Tools.**
     *   [x] We have taken a standard Model Context Protocol (MCP) server and used our SDK to add per-call microtransactions. This demonstrates our flagship use case: creating a true pay-per-use model where AI agents can autonomously pay for the tools they need.
 *   **Demo 2 (The Sovereign SaaS): Building New Business Models.**
-    *   [ ] We will build a simple "premium content" canister that uses the **SDK's `charge()` method** to bill users, demonstrating how developers retain full control over their business model while using Prometheus as a simple payment utility.
+    *   [ ] We will build a simple "premium content" canister that uses the SDK's `charge()` method to bill users, demonstrating how developers retain full control over their business model while using Prometheus as a simple payment utility.
 
 ---
 
