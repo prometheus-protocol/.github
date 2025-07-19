@@ -22,6 +22,7 @@ The core of Prometheus is a production-ready Authorization Server implementing t
 - ✓ **Refresh Token Rotation:** Enhances security by issuing a new, single-use refresh token each time one is used, mitigating the risk of token theft.
 - ✓ **Dynamic Client Registration (DCR):** A public `/register` endpoint (`RFC 7591`) allows applications to register programmatically without manual intervention.
 - ✓ **Resource Indicators:** Supports token audience binding via the `resource` parameter (`RFC 8707`), ensuring tokens are used only at their intended destination.
+- ✓ **Multi-Token Payment Authorization:** Enables resource servers to define a list of accepted ICRC-2 compliant tokens for payment-gated scopes.
 - ✓ **Server Metadata:** Provides `/.well-known/oauth-authorization-server` (`RFC 8414`) and `/.well-known/jwks.json` endpoints for automated client configuration and key discovery.
 - ✓ **MCP Authorization Spec Compliant:** Fully adheres to the requirements for an Authorization Server within the MCP ecosystem (rev. 2025-06-18).
 
@@ -40,14 +41,14 @@ Our development is organized into distinct, thematic phases.
     *   [x] Integrated JWT signing and public key discovery (`/.well-known/jwks.json`).
     *   [x] Implemented modern security standards: PKCE, DCR, Refresh Token Rotation, and Resource Indicators.
 *   **The Microtransaction Engine:**
-    *   [x] Integrated with ICRC-2 compliant token ledgers.
-    *   [x] Implemented an on-chain ICRC-2 allowance system, allowing users to grant specific spending permissions to applications.
-    *   [x] Implemented a user-facing, per-service allowance model for granular security and control.
+    *   [x] **Implemented a flexible, multi-token architecture.**
+    *   [x] **Enabled resource servers to define a list of accepted ICRC-2 payment tokens** during registration.
+    *   [x] **Created a user flow for selecting a payment token** and setting a per-service, per-token allowance.
 *   **Finalization:**
     *   [x] Wrote comprehensive unit, integration, and end-to-end tests for all flows.
     *   [ ] **Action Item:** Submit the canister code for a professional security audit.
 
-**Phase 0 Deliverable:** A production-ready, on-chain OAuth 2.1 server that can broker microtransactions.
+**Phase 0 Deliverable:** A production-ready, on-chain OAuth 2.1 server that can broker microtransactions using multiple token types.
 - **Repo:** [`prometheus-protocol/auth-canister`](https://github.com/prometheus-protocol/auth-canister)
 
 ---
