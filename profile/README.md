@@ -53,19 +53,20 @@ Our development is organized into distinct, thematic phases.
 
 ---
 
-### Phase 1: Developer Enablement - "Project Kitsune" (The SDKs)
+### Phase 1: Developer Enablement - "Project Kitsune" (✅ COMPLETE)
 
 **Goal:** Create a modular set of SDKs that make it dead simple for any service to integrate Prometheus authentication and payments.
 
-*   **SDK for Web2 & Off-Chain Services (`@prometheus-protocol/typescript-sdk`):**
-    *   [x] **Frontend Client:** A single `createPrometheusClient` function that encapsulates the entire user authentication and authorization flow.
+*   **SDK for On-Chain Services (`motoko-mcp-sdk`):**
+    *   [x] **A complete server framework for building production-ready, MCP-compliant services in Motoko.** It handles all the JSON-RPC boilerplate, routing, and streaming, allowing developers to focus on their application logic.
+    *   [ ] **Provides built-in hooks for adding Prometheus-based authentication and per-call payments** to any tool, enabling instant monetization for the AI agent economy.
+*   **SDK for Web Clients & Off-Chain Backends (`@prometheus-protocol/typescript-sdk`):**
+    *   [x] **Frontend Client:** A single `createPrometheusClient` function that encapsulates the entire user authentication and authorization flow for web applications.
     *   [x] **Backend Client:** A simple `PrometheusServerClient` with a `charge()` method that directly executes an `icrc2_transfer_from` call on the appropriate ledger, using the allowance granted by the user.
-*   **SDK for On-Chain Services (`prometheus.mo`):**
-    *   [ ] Provide a simple `validate_jwt(token)` function that handles JWKS fetching, caching, and full token validation.
-    *   [ ] Provide a helper function for on-chain services to directly execute an `icrc2_transfer_from` call, leveraging the user's on-chain allowance.
 
-**Phase 1 Deliverable:** Core SDKs enabling any Web2 or Web3 developer to integrate in minutes.
-- **NPM Package:** [`@prometheus-protocol/typescript-sdk`](https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk)
+**Phase 1 Deliverables:** Core SDKs enabling any Web2 or Web3 developer to integrate in minutes.
+- **Motoko SDK:** [`mops.one/mcp-motoko-sdk`](https://mops.one/mcp-motoko-sdk) | [`GitHub Repo`](https://github.com/prometheus-protocol/motoko-sdk)
+- **TypeScript SDK:** [`npmjs.com/package/@prometheus-protocol/typescript-sdk`](https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk)
 
 ---
 
@@ -73,10 +74,10 @@ Our development is organized into distinct, thematic phases.
 
 **Goal:** Build live, working demos to prove the power and simplicity of the protocol for both human and machine economies.
 
-*   **Demo 1 (The Agent Economy): Monetizing AI Tools.**
-    *   [x] We have taken a standard Model Context Protocol (MCP) server and used our SDK to add per-call microtransactions. This demonstrates our flagship use case: creating a true pay-per-use model where AI agents can autonomously pay for the tools they need.
-*   **Demo 2 (The Sovereign SaaS): Building New Business Models.**
-    *   [ ] We will build a simple "premium content" canister that uses the SDK's `charge()` method to bill users, demonstrating how developers retain full control over their business model while using Prometheus as a simple payment utility.
+*   **Demo 1 (The Web2 Bridge): Monetizing Existing Off-Chain Tools.**
+    *   [x] We used our **TypeScript SDK** to add a Prometheus payment layer to existing MCP servers written in Node.js. This demonstrates how any off-chain service can be integrated into the on-chain economy without a full rewrite.
+*   **Demo 2 (The On-Chain Native): Building Sovereign AI Services.**
+    *   [x] We built a new, fully on-chain MCP server from scratch **using our `motoko-mcp-sdk`**. This reference implementation showcases how to build Web3-native, sovereign, and instantly monetizable services directly on the Internet Computer.
 
 ---
 
