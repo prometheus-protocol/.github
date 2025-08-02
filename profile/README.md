@@ -48,7 +48,7 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 *   **The Proof of Concept:**
     *   [x] Deployed live demos showcasing both on-chain native services (built with the Motoko SDK) and Web2 services bridged into the on-chain economy (using the TypeScript SDK).
 
-**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing services on the IC.
+**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing MCP servers on the IC.
 - **Auth Canister:** [`prometheus-protocol/auth-canister`](https://github.com/prometheus-protocol/auth-canister)
 - **Motoko SDK:** [`mops.one/mcp-motoko-sdk`](https://mops.one/mcp-motoko-sdk) | [`GitHub Repo`](https://github.com/prometheus-protocol/motoko-sdk)
 - **TypeScript SDK:** [`npmjs.com/package/@prometheus-protocol/typescript-sdk`](https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk)
