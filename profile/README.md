@@ -80,10 +80,10 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 **Goal:** With a functional marketplace and a core set of trusted apps, the focus shifts to scaling the ecosystem through strategic business development and partnerships.
 
 *   **Developer & Enterprise Onboarding:**
-    *   [ ] Actively recruit high-value developers and existing Web2 API providers to publish their services on the platform.
+    *   [ ] Actively recruit high-value developers to publish their services on the platform.
     *   [ ] Develop B2B offerings, such as managed private registries and support for enterprise clients.
 *   **Client-Side Integration:**
-    *   [ ] Partner with developers of AI agents and MCP clients (e.g., VSCode extensions, autonomous agent frameworks) to integrate our registry as a primary, high-trust service source.
+    *   [ ] Partner with developers of AI agents and MCP clients (e.g., VSCode, autonomous agent frameworks) to integrate our registry as a primary, high-trust service source.
 *   **Community Growth:**
     *   [ ] Launch community initiatives such as hackathons, developer grants, and comprehensive tutorials to accelerate adoption.
 
