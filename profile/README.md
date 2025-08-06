@@ -1,20 +1,22 @@
-# Prometheus Protocol: An Open Standard for Authorization & Payments
+# **Prometheus Protocol: The Trust Layer for Decentralized Commerce**
 
-### Our mission is to replace the 2.9% tax on internet commerce with a decentralized, open-source, and near-zero fee payment protocol.
+### Our mission is to enable a new generation of decentralized commerce by providing the open-source foundation for **verifiable trust, secure identity, and near-zero fee payments.**
 
 <img width="1536" alt="Prometheus Protocol Banner" src="https://github.com/user-attachments/assets/0c7c5720-1d4a-4e50-b410-873a9ba9cc07" />
 
 ---
 
-## Overview
+## **Overview**
 
-Prometheus Protocol is a full-featured, on-chain **OAuth 2.1 provider** built for the Internet Computer. It provides a robust, general-purpose solution for any application requiring standards-based authentication and authorization.
+Prometheus Protocol is a complete, on-chain economic engine for the Internet Computer. It provides a unified solution for the three pillars of a trustworthy digital economy:
 
-While designed for broad use, it is also a fully compliant **Authorization Server** for the **Model Context Protocol (MCP)** ecosystem. This dual focus ensures that Prometheus is both a flexible tool for the wider IC community and a hardened, specification-compliant engine for enterprise-grade protocols.
+1.  **Secure Identity & Authorization:** A full-featured, on-chain **OAuth 2.1 provider** serves as the robust foundation for any application requiring standards-based authentication.
+2.  **Verifiable Trust & Discovery:** A high-assurance **App Store and Registry** allows users and AI agents to discover and connect to MCP servers whose code has been cryptographically verified and certified.
+3.  **Direct & Efficient Payments:** An integrated **ICRC-2 allowance system** empowers users to grant services direct, metered access to tokens, enabling a new wave of monetizable applications.
 
-Ultimately, it serves as the foundational security and payment layer for a new generation of decentralized applications and AI agent economies.
+By combining these layers, Prometheus provides the foundational infrastructure for a new generation of decentralized applications and the emerging AI agent economy.
 
-## Features & Compliance
+## **Features & Compliance**
 
 The core of Prometheus is a production-ready Authorization Server implementing the latest security best practices from the IETF and the specific requirements of the MCP specification.
 
@@ -28,13 +30,13 @@ The core of Prometheus is a production-ready Authorization Server implementing t
 
 ---
 
-## The Roadmap
+## **The Roadmap**
 
 Our journey is structured in ambitious phases, building from a solid foundation towards a vibrant, trusted ecosystem.
 
-### Phase 0: The Foundation - "Project Hephaestus" (✅ COMPLETE)
+### **Phase 0: The Foundation - "Project Hephaestus" (✅ COMPLETE)**
 
-**Goal:** Forge the complete, end-to-end stack: a production-grade auth server, developer-friendly SDKs, and live proof-of-concept demonstrations.
+**Goal:** Forge the complete, end-to-end stack for secure identity and payments: a production-grade auth server, developer-friendly SDKs, and live proof-of-concept demonstrations.
 
 *   **The Core Auth Server:**
     *   [x] Implemented the core OAuth 2.1 flows (`/authorize`, `/token`) with Internet Identity.
@@ -48,36 +50,32 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 *   **The Proof of Concept:**
     *   [x] Deployed live demos showcasing both on-chain native services (built with the Motoko SDK) and Web2 services bridged into the on-chain economy (using the TypeScript SDK).
 
-**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing MCP servers on the IC.
-- **Auth Canister:** [`prometheus-protocol/auth-canister`](https://github.com/prometheus-protocol/auth-canister)
-- **Motoko SDK:** [`mops.one/mcp-motoko-sdk`](https://mops.one/mcp-motoko-sdk) | [`GitHub Repo`](https://github.com/prometheus-protocol/motoko-sdk)
-- **TypeScript SDK:** [`npmjs.com/package/@prometheus-protocol/typescript-sdk`](https://www.npmjs.com/package/@prometheus-protocol/typescript-sdk)
+**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing MCP servers on the IC, all available within this monorepo.
 
 ---
 
-### Phase 1: The High-Trust Registry - "Project Arsenal"
+### **Phase 1: The Trust Layer - "Project Arsenal" (IN PROGRESS)**
 
-**Goal:** Build the premier, high-trust marketplace for audited, monetizable MCP services, establishing the gold standard for safety and reliability in the agent economy.
+**Goal:** Build the premier, high-trust marketplace for provably safe MCP services, establishing the gold standard for reliability in the agent economy by leveraging community standards.
 
-*   **The Registry Canister (`The Arsenal`):**
-    *   [ ] Develop a versioned, on-chain catalog for MCP services, storing immutable Wasm hashes and service manifests.
-    *   [ ] Build a developer CLI (`mcp-cli`) for seamless publishing and version management.
-*   **The On-Chain Audit Process:**
-    *   [ ] Establish a framework for vetted, third-party auditors to submit on-chain audit reports for specific Wasm hashes.
-    *   [ ] Integrate audit results directly into the service manifest, enabling "Verified & Audited" badges in the UI.
+*   **The Certified Registry (`The Arsenal`):**
+    *   [ ] Implement and deploy our official **ICRC-118 compliant Registry**. This will serve as the on-chain, versioned catalog for all certified MCP services.
+*   **The Provably Secure Framework:**
+    *   [ ] Develop and publish the **`Immutable Orchestrator`**, our hardened, open-source **ICRC-120** implementation. This canister enforces that only certified code can be run.
+    *   [ ] Require developers to **blackhole** their Orchestrator, making its security rules immutable and tamper-proof.
+*   **The On-Chain Certification Process:**
+    *   [ ] Deploy our **ICRC-126 `Validator` canister**, which will cryptographically sign and issue endorsements for audited Wasm hashes.
+    *   [ ] Implement a multi-tiered certification system (**Bronze, Silver, Gold**) based on the level of scrutiny, from automated reproducible builds to full manual source code audits.
 *   **The User & Agent Experience:**
-    *   [ ] Deploy a web frontend for discovering, filtering, and interacting with services in `The Arsenal`.
-    *   [ ] Expose a rich, machine-readable API for agents to programmatically discover services based on keywords, signatures, and audit status.
-*   **Business Model Implementation:**
-    *   [ ] Implement a one-time registration fee for new services to cover the cost of an initial safety and compliance audit.
-    *   [ ] Implement a small, transparent transaction fee on payments brokered through the platform to ensure long-term sustainability.
-*   **Key Objective:** Onboard and facilitate the audit of the first 5-10 flagship applications to seed the ecosystem with high-quality, trusted tools.
+    *   [ ] Deploy a web frontend for discovering, filtering, and connecting to services in `The Arsenal`.
+    *   [ ] Integrate the **Security Certificate UI** into the discovery and consent flows, giving users transparent, real-time verification of a server's integrity.
+*   **Key Objective:** Onboard and certify the first 5-10 flagship applications to seed the ecosystem with high-quality, trusted tools.
 
 ---
 
-### Phase 2: Ecosystem Growth - "Project Alliance"
+### **Phase 2: Ecosystem Growth - "Project Alliance"**
 
-**Goal:** With a functional marketplace and a core set of trusted apps, the focus shifts to scaling the ecosystem through strategic business development and partnerships.
+**Goal:** With a unified platform for trust, identity, and payments, the focus shifts to scaling the ecosystem through strategic business development and partnerships.
 
 *   **Developer & Enterprise Onboarding:**
     *   [ ] Actively recruit high-value developers to publish their services on the platform.
@@ -89,13 +87,13 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 
 ---
 
-### Phase 3: The Autonomous Economy - "Project Agora"
+### **Phase 3: The Autonomous Economy - "Project Agora"**
 
-**Goal:** Evolve from a centrally-managed platform into a self-sustaining, community-governed economic protocol.
+**Goal:** Evolve from a platform managed by the founding team into a self-sustaining, community-governed economic protocol.
 
 *   **Decentralized Governance & Curation:**
     *   [ ] **DAO Formation:** Deploy a governance DAO to give the community control over the platform's treasury, fee structures, and policies.
-    *   [ ] **The Handover:** Transition control of `The Arsenal` and its policies to the DAO, cementing its status as a decentralized public utility.
+    *   [ ] **The Handover:** Transition control of the **Registry (ICRC-118)** and **Validator (ICRC-126)** canisters to the DAO, cementing their status as a decentralized public utility.
     *   [ ] **Community Curation:** Allow the DAO to manage the list of vetted auditors and vote on community-driven standards.
 *   **Advanced Economic Primitives:**
     *   [ ] **Security Bonds:** Enable developers to stake tokens as a security bond, providing an economic guarantee of their service's integrity that can be slashed to compensate users in case of malpractice.
@@ -103,9 +101,9 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 
 ---
 
-## Community & Contribution
+## **Community & Contribution**
 
-Prometheus is an open-source project. We welcome contributions, feedback, and collaboration from the community.
+Prometheus is a fully open-source project. We welcome contributions, feedback, and collaboration from the community.
 
--   **Issues:** Report bugs or suggest features in the relevant repository's [Issues tab](https://github.com/prometheus-protocol/auth-canister/issues).
--   **Contribute:** Check out our `CONTRIBUTING.md` guidelines in each repository to get started.
+-   **Issues:** Report bugs or suggest features in this repository's [Issues tab](https://github.com/prometheus-protocol/mcp-hub/issues).
+-   **Contribute:** Check out our `CONTRIBUTING.md` guidelines to get started.
