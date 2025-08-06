@@ -50,7 +50,7 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 *   **The Proof of Concept:**
     *   [x] Deployed live demos showcasing both on-chain native services (built with the Motoko SDK) and Web2 services bridged into the on-chain economy (using the TypeScript SDK).
 
-**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing MCP servers on the IC, all available within this monorepo.
+**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing MCP servers on the IC, all available within this GitHub organization.
 
 ---
 
