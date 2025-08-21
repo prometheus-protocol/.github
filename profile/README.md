@@ -1,6 +1,6 @@
 <img width="940" height="200" alt="prometheus-banner" src="https://github.com/user-attachments/assets/0e0cc899-def2-42dc-a365-a34512f280ba" />
 
-# **Prometheus Protocol: The Trust Layer for the AI Economy**
+# **The Trust Layer for the AI Economy**
 
 ### Our mission is to enable a new generation of decentralized applications by providing the open-source, on-chain foundation for **verifiable trust, secure identity, and near-zero fee payments.**
 
