@@ -23,7 +23,7 @@ The protocol is composed of several key canisters and tools working in concert:
 -   **The App Store & Trust Hub (`mcp_registry`):** The core of the app store. It implements `ICRC-118` for version management and `ICRC-126`/`ICRC-127` to manage the verification, auditing, and bounty lifecycle.
 -   **The Secure Deployer (`mcp_orchestrator`):** The deployment engine. It implements `ICRC-120` to securely deploy new canister instances using only DAO-verified WASM files.
 -   **The Identity Provider (`auth_server`):** A full-featured, on-chain OAuth 2.1 provider that handles identity and authorization for the entire ecosystem.
--   **The Developer CLI (`@prometheus-protocol/cli`):** The developer-facing tool for interacting with the entire publishing and auditing lifecycle.
+-   **The Developer CLI (`@prometheus-protocol/app-store-cli`):** The developer-facing tool for interacting with the entire publishing and auditing lifecycle.
 
 ---
 
@@ -35,57 +35,51 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 
 **Goal:** Forge the complete, end-to-end stack for secure identity and payments.
 
-*   **The Core Auth Server:**
-    *   [x] Implemented the core OAuth 2.1 flows, JWT signing, and modern security standards.
-*   **The Developer SDKs:**
-    *   [x] Released `motoko-mcp-sdk` and `@prometheus-protocol/typescript-sdk` for building and integrating monetizable services.
-*   **The Proof of Concept:**
-    *   [x] Deployed live demos showcasing the full identity and payment stack.
-
-**Phase 0 Deliverable:** A complete, end-to-end, production-ready stack for building and monetizing services on the IC.
+-   **Deliverables:** A production-ready OAuth 2.1 provider, comprehensive Motoko & TypeScript SDKs for building and monetizing services, and live demos showcasing the full stack.
 
 ---
 
-### **Phase 1: The Trust Layer - "Project Arsenal" (⏳ NEARING COMPLETION)**
+### **Phase 1: The Trust Layer - "Project Arsenal" (✅ COMPLETE)**
 
-**Goal:** Build the premier, high-trust software supply chain for provably safe services, establishing the gold standard for reliability in the agent economy.
+**Goal:** Build the premier, high-trust software supply chain for provably safe services.
 
-*   **Completed in Phase 1:**
-    *   [x] **The On-Chain Supply Chain Hub:** Deployed the `mcp_registry` (ICRC-118/126/127) and `mcp_orchestrator` (ICRC-120).
-    *   [x] **The Developer & Auditor Tooling:** Developed and shipped the complete `@prometheus-protocol/cli`.
-    *   [x] **The App Store Frontend:** Deployed a user-friendly web interface for discovering services and viewing their on-chain certification status.
-    *   [x] **The Governance & Audit Workflow:** Implemented the full on-chain workflow for Developers, Auditors, and the DAO.
-*   **Next Steps for Phase 1:**
-    *   [ ] **DAO Formation & Onboarding:** Formally constitute the governing DAO and onboard the initial set of trusted auditors.
-    *   [ ] **Security Hardening:** Submit the entire canister suite for a professional, third-party security audit.
-
-**Phase 1 Deliverable:** A feature-complete, on-chain software supply chain, including a web portal for discovery and a full command-line interface for all core user journeys.
+-   **Deliverables:** A feature-complete, on-chain software supply chain, including the `mcp_registry` (ICRC-118/126/127), the `mcp_orchestrator` (ICRC-120), a web portal for discovery, and a full command-line interface for all core user journeys.
 
 ---
 
-### **Phase 2: Ecosystem Growth - "Project Alliance" (🚀 UP NEXT)**
+### **Phase 2: Ecosystem Growth - "Project Alliance" (⏳ IN PROGRESS)**
 
-**Goal:** With a unified platform for trust, identity, and payments, the focus shifts to scaling the ecosystem through strategic onboarding and partnerships.
+**Goal:** Bootstrap a self-sustaining economy by launching the **Alpha Flywheel Initiative**. This is the current, active phase, focused on building the economic and community incentives to drive supply, trust, and demand.
 
-*   **Onboard the First Wave of Production Services:**
-    *   [ ] Actively recruit and support high-value developers to publish their services on the platform.
-    *   [ ] Fund the initial audit bounties to bootstrap the marketplace and demonstrate the value of certification.
-*   **Drive Client-Side Integration:**
-    *   [ ] Partner with developers of AI agents and MCP clients to integrate the registry as a primary, high-trust service source.
-*   **Accelerate Community Adoption:**
-    *   [ ] Launch community initiatives such as hackathons, developer grants, and comprehensive tutorials.
+The entire Alpha phase is powered by **preMCPT**, a pre-genesis token used to reward early contributors.
+
+-   **The Supply Engine (Developer Incentives):**
+    -   [ ] **MCP Server Bounty System:** A public bounty board where developers can claim rewards for building and certifying specific, high-value MCP servers.
+    -   [ ] **Genesis Grant Program:** A formal process for funding larger, more complex projects proposed by the community.
+
+-   **The Trust Engine (Auditor Incentives):**
+    -   [ ] **Auditor Hub & Reputation System:** A transparent marketplace for security audits where vetted auditors can stake reputation tokens to claim audit bounties and earn rewards.
+    -   [ ] **Real-Time Notifications:** Discord integration to instantly alert the community when new services are submitted for audit.
+
+-   **The Demand Engine (End-User Incentives):**
+    -   [ ] **Usage Mining System:** A client-agnostic "Authenticated Beacon" model. Developers integrate a lightweight Beacon library (Motoko/Rust) into their servers, which securely reports usage data on behalf of end-users, making them eligible for daily `preMCPT` rewards.
+    -   [ ] **Showcase Agent:** A public Discord AI agent that uses certified servers from the App Store, demonstrating the power of the ecosystem and participating in the usage mining program.
+
+-   **The Foundation (Documentation & Comms):**
+    -   [ ] **Developer Documentation Hub:** Launch a comprehensive documentation site with quickstarts, tutorials, and core concepts.
+    -   [ ] **Litepaper & Launch Comms:** Publish the economic model for the Alpha phase and announce the program to the public.
 
 ---
 
-### **Phase 3: The Autonomous Economy - "Project Agora"**
+### **Phase 3: The Autonomous Economy - "Project Agora" (🚀 UP NEXT)**
 
 **Goal:** Evolve from a platform managed by the founding team into a self-sustaining, community-governed economic protocol.
 
-*   **Full Decentralization & Curation:**
-    *   [ ] **The Handover:** Transition full control of the Registry Hub and its policies (e.g., managing the list of vetted auditors, fee structures) to the DAO, cementing its status as a decentralized public utility.
-*   **Advanced Economic Primitives:**
-    *   [ ] **Security Bonds:** Enable developers to stake tokens as a security bond, providing an economic guarantee of their service's integrity.
-    *   [ ] **Atomic Revenue Sharing:** Enhance the SDK to allow services to programmatically split incoming revenue with other services, enabling more complex and collaborative applications.
+-   **Full Decentralization & Curation:**
+    -   [ ] **The Handover:** Transition full control of the Registry Hub and its policies (e.g., managing the list of vetted auditors, fee structures) to the DAO, cementing its status as a decentralized public utility.
+-   **Advanced Economic Primitives:**
+    -   [ ] **Security Bonds:** Enable developers to stake tokens as a security bond, providing an economic guarantee of their service's integrity.
+    -   [ ] **Atomic Revenue Sharing:** Enhance the SDK to allow services to programmatically split incoming revenue with other services, enabling more complex and collaborative applications.
 
 ---
 
