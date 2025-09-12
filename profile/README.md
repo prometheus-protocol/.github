@@ -12,7 +12,7 @@ Prometheus Protocol is a complete, on-chain economic engine for the Internet Com
 
 1.  **Secure Identity & Authorization:** A full-featured, on-chain **OAuth 2.1 provider** serves as the robust foundation for any application requiring standards-based authentication.
 2.  **Verifiable Trust & Discovery:** A high-assurance **App Store and Software Supply Chain Hub** that combines a versioned registry (ICRC-118), an audit bounty marketplace (ICRC-127), and an on-chain endorsement ledger (ICRC-126).
-3.  **Direct & Efficient Payments:** An integrated **ICRC-2 allowance system** empowers users to grant services direct, metered access to tokens, enabling a new wave of monetizable applications.
+3.  **Direct & Efficient Payments:** An integrated **ICRC-2 allowance system** empowers users to grant services direct, metered access to tokens (like USDC), enabling a new wave of monetizable applications.
 
 By combining these layers, Prometheus provides the foundational infrastructure for a new generation of decentralized applications and the emerging AI agent economy.
 
@@ -49,25 +49,23 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 
 ### **Phase 2: Ecosystem Growth - "Project Alliance" (⏳ IN PROGRESS)**
 
-**Goal:** Bootstrap a self-sustaining economy by launching the **Alpha Flywheel Initiative**. This is the current, active phase, focused on building the economic and community incentives to drive supply, trust, and demand.
-
-The entire Alpha phase is powered by **preMCPT**, a pre-genesis token used to reward early contributors.
+**Goal:** Bootstrap a self-sustaining economy by launching the **Alpha Flywheel Initiative**. This is the current, active phase, focused on building the economic and community incentives to drive supply, trust, and demand using direct USDC rewards.
 
 -   **The Supply Engine (Developer Incentives):**
-    -   [ ] **MCP Server Bounty System:** A public bounty board where developers can claim rewards for building and certifying specific, high-value MCP servers.
-    -   [ ] **Genesis Grant Program:** A formal process for funding larger, more complex projects proposed by the community.
+    -   [ ] **MCP Server Bounty System:** A public bounty board where developers can claim **USDC rewards** for building and certifying specific, high-value MCP servers.
+    -   [ ] **Ecosystem Grant Program:** A formal process for funding larger, more complex projects proposed by the community with USDC grants.
 
 -   **The Trust Engine (Auditor Incentives):**
-    -   [ ] **Auditor Hub & Reputation System:** A transparent marketplace for security audits where vetted auditors can stake reputation tokens to claim audit bounties and earn rewards.
+    -   [ ] **Auditor Hub & Reputation System:** A transparent marketplace for security audits where vetted auditors can build their on-chain reputation, claim audit bounties, and earn **USDC rewards**.
     -   [ ] **Real-Time Notifications:** Discord integration to instantly alert the community when new services are submitted for audit.
 
 -   **The Demand Engine (End-User Incentives):**
-    -   [ ] **Usage Mining System:** A client-agnostic "Authenticated Beacon" model. Developers integrate a lightweight Beacon library (Motoko/Rust) into their servers, which securely reports usage data on behalf of end-users, making them eligible for daily `preMCPT` rewards.
+    -   [ ] **Usage Mining System:** A client-agnostic "Authenticated Beacon" model. Developers integrate a lightweight Beacon library (Motoko/Rust) into their servers, which securely reports usage data on behalf of end-users, making them eligible for daily **USDC rewards**.
     -   [ ] **Showcase Agent:** A public Discord AI agent that uses certified servers from the App Store, demonstrating the power of the ecosystem and participating in the usage mining program.
 
 -   **The Foundation (Documentation & Comms):**
     -   [ ] **Developer Documentation Hub:** Launch a comprehensive documentation site with quickstarts, tutorials, and core concepts.
-    -   [ ] **Litepaper & Launch Comms:** Publish the economic model for the Alpha phase and announce the program to the public.
+    -   [ ] **Incentive Program Launch:** Announce the details of the Alpha Flywheel Initiative and its USDC reward structure to the public.
 
 ---
 
@@ -76,9 +74,9 @@ The entire Alpha phase is powered by **preMCPT**, a pre-genesis token used to re
 **Goal:** Evolve from a platform managed by the founding team into a self-sustaining, community-governed economic protocol.
 
 -   **Full Decentralization & Curation:**
-    -   [ ] **The Handover:** Transition full control of the Registry Hub and its policies (e.g., managing the list of vetted auditors, fee structures) to the DAO, cementing its status as a decentralized public utility.
+    -   [ ] **The Handover:** Transition full control of the Registry Hub and its policies (e.g., managing the list of vetted auditors, fee structures) to a DAO, cementing its status as a decentralized public utility.
 -   **Advanced Economic Primitives:**
-    -   [ ] **Security Bonds:** Enable developers to stake tokens as a security bond, providing an economic guarantee of their service's integrity.
+    -   [ ] **Security Bonds:** Enable developers to stake **USDC** as a security bond, providing an economic guarantee of their service's integrity.
     -   [ ] **Atomic Revenue Sharing:** Enhance the SDK to allow services to programmatically split incoming revenue with other services, enabling more complex and collaborative applications.
 
 ---
