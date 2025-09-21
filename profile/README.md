@@ -54,18 +54,20 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 
 ---
 
-### **Phase 3: The Premier Marketplace - "Project Agora" (🚀 UP NEXT)**
+### **Phase 3: The Professional Marketplace - "Project Agora" (🚀 UP NEXT)**
 
-**Goal:** Transition from a foundational protocol into the premier, feature-rich marketplace for the open agentic economy, focusing on professional tooling, advanced economic models, and mainstream adoption.
--   **Advanced Economic Primitives:**
-    -   [ ] **Security Bonds:** Enable developers to stake **USDC** as a security bond, providing an economic guarantee of their service's integrity and signaling a higher level of commitment to users.
-    -   [ ] **Atomic Revenue Sharing:** Enhance the SDK to allow services to programmatically split incoming revenue with other services, enabling more complex and collaborative applications.
--   **Professional Developer Tooling:**
-    -   [ ] **Developer Analytics Dashboard:** Provide service developers with a rich dashboard to track usage, revenue, and user engagement, giving them the insights to grow their business.
-    -   [ ] **SDK Expansion:** Launch official SDKs for other key languages in the AI ecosystem, such as Python and Rust, to maximize our addressable market.
--   **Mainstream Adoption & Integration:**
-    -   [ ] **Strategic Partnerships:** Forge partnerships with major AI agent platforms and developer ecosystems to integrate Prometheus as their default trust and monetization layer.
-    -   [ ] **Protocol Standardization:** Formalize the Prometheus verification and identity standards into a public ICRC proposal, positioning it as a foundational pillar for the entire Internet Computer ecosystem.
+**Goal:** Evolve from a foundational protocol into a professional, scalable, and accessible marketplace ready for widespread adoption.
+-   **Professionalizing the Marketplace:**
+    -   [ ] **Auditor & Developer SOPs:** Establish clear Standard Operating Procedures and platform guidelines to create a predictable, streamlined, and professional audit experience.
+    -   [ ] **Automated Cycles Management:** Implement a robust cycles monitoring and top-up system to ensure the long-term reliability and operational excellence of services on the platform.
+-   **Expanding the Economy:**
+    -   [ ] **Advanced Payments SDK:** Enhance the Motoko SDK with programmatic charging capabilities, allowing developers to implement dynamic, usage-based billing models beyond static fees.
+    -   [ ] **Multi-Chain Onboarding:** Integrate ETH wallet support and 1-click USDC bridging (from Base, ETH, etc.) to dramatically lower the barrier for the wider Web3 community to bring capital and participate in the economy.
+-   **Scaling Developer Adoption & Interoperability:**
+    -   [ ] **Rust SDK Feature Parity:** Achieve full feature parity for the Rust MCP SDK, unlocking the entire Rust developer ecosystem on the Internet Computer.
+    -   [ ] **Official Registry Integration:** Integrate with the official MCP registry, ensuring all services published on Prometheus are discoverable across the entire AI agent ecosystem and cementing our role as the premier trust layer.
+-   **Accelerating Community Growth:**
+    -   [ ] **Continuous Outreach & Education:** Scale our community engagement through targeted outreach, tech meetups, and a steady stream of high-quality tutorials, guides, and blog content to support our growing user base.
 
 ---
 
