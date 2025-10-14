@@ -59,15 +59,15 @@ Our journey is structured in ambitious phases, building from a solid foundation 
 **Goal:** Evolve from a foundational protocol into a professional, scalable, and accessible marketplace ready for widespread adoption.
 -   **Professionalizing the Marketplace:**
     -   [ ] **Auditor & Developer SOPs:** Establish clear Standard Operating Procedures and platform guidelines to create a predictable, streamlined, and professional audit experience.
-    -   [ ] **Automated Cycles Management:** Implement a robust cycles monitoring and top-up system to ensure the long-term reliability and operational excellence of services on the platform.
+    -   [x] **Automated Cycles Management:** Implement a robust cycles monitoring and top-up system to ensure the long-term reliability and operational excellence of services on the platform.
 -   **Expanding the Economy:**
-    -   [ ] **Advanced Payments SDK:** Enhance the Motoko SDK with programmatic charging capabilities, allowing developers to implement dynamic, usage-based billing models beyond static fees.
+    -   [x] **Advanced Payments SDK:** Enhance the Motoko SDK with programmatic charging capabilities, allowing developers to implement dynamic, usage-based billing models beyond static fees.
     -   [ ] **Multi-Chain Onboarding:** Integrate ETH wallet support and 1-click USDC bridging (from Base, ETH, etc.) to dramatically lower the barrier for the wider Web3 community to bring capital and participate in the economy.
 -   **Scaling Developer Adoption & Interoperability:**
     -   [ ] **Rust SDK Feature Parity:** Achieve full feature parity for the Rust MCP SDK, unlocking the entire Rust developer ecosystem on the Internet Computer.
-    -   [ ] **Official Registry Integration:** Integrate with the official MCP registry, ensuring all services published on Prometheus are discoverable across the entire AI agent ecosystem and cementing our role as the premier trust layer.
+    -   [x] **Official Registry Integration:** Integrate with the official MCP registry, ensuring all services published on Prometheus are discoverable across the entire AI agent ecosystem and cementing our role as the premier trust layer.
 -   **Accelerating Community Growth:**
-    -   [ ] **Continuous Outreach & Education:** Scale our community engagement through targeted outreach, tech meetups, and a steady stream of high-quality tutorials, guides, and blog content to support our growing user base.
+    -   [x] **Continuous Outreach & Education:** Scale our community engagement through targeted outreach, tech meetups, and a steady stream of high-quality tutorials, guides, and blog content to support our growing user base.
 
 ---
 
